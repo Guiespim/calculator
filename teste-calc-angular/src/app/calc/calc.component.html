@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Calculator</h1>
+        </div>
+    </header>
+    <section>
+        <div class="calc-body">
+            <form class="formCalc" [formGroup]="calcForm">
+                <div class="visor-div">
+                    <input type="text" name="visor" id="visor" class="visor" formControlName="visor" readonly>
+                </div>
+                <div class="buttons-div">
+                    <div class="calc-line first-line">
+                        <button type="button" formControlName="clear" (click)="clear()" class="calc-button">C</button>
+                        <button type="button" formControlName="divide" (click)="addButtonValue(calcForm.value.divide)"  class="calc-button">&divide;</button>
+                    </div>
+                    <div class="calc-line second-line">
+                        <button type="button" formControlName="button7" (click)="addButtonValue(calcForm.value.button7)" class="calc-button">7</button>
+                        <button type="button" formControlName="button8" (click)="addButtonValue(calcForm.value.button8)" class="calc-button">8</button>
+                        <button type="button" formControlName="button9" (click)="addButtonValue(calcForm.value.button9)" class="calc-button">9</button>
+                        <button type="button" formControlName="times" (click)="addButtonValue(calcForm.value.times)" class="calc-button">&times;</button>
+                    </div>
+                    <div class="calc-line third-line">
+                        <button type="button" formControlName="button4" (click)="addButtonValue(calcForm.value.button4)" class="calc-button">4</button>
+                        <button type="button" formControlName="button5" (click)="addButtonValue(calcForm.value.button5)" class="calc-button">5</button>
+                        <button type="button" formControlName="button6" (click)="addButtonValue(calcForm.value.button6)" class="calc-button">6</button>
+                        <button type="button" formControlName="minus" (click)="addButtonValue(calcForm.value.minus)" class="calc-button">-</button>
+                    </div>
+                    <div class="calc-line fourth-line">
+                        <button type="button" formControlName="button1" (click)="addButtonValue(calcForm.value.button1)" class="calc-button">1</button>
+                        <button type="button" formControlName="button2" (click)="addButtonValue(calcForm.value.button2)" class="calc-button">2</button>
+                        <button type="button" formControlName="button3" (click)="addButtonValue(calcForm.value.button3)" class="calc-button">3</button>
+                        <button type="button" formControlName="plus" (click)="addButtonValue(calcForm.value.plus)" class="calc-button">+</button>
+                    </div>
+                    <div class="calc-line fifth-line">
+                        <button type="button" formControlName="button0" (click)="addButtonValue(calcForm.value.button0)" class="calc-button">0</button>
+                        <button type="button" formControlName="iquals" (click)="equals()" class="calc-button">=</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
